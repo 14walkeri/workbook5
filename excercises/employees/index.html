@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <form>
+        <label for="">Employees</label>
+        <select onchange="loadEmployeesTable()" id="employeesList">
+          <option value="">select...</option>
+        </select>
+      </form>
+    </header>
+    <main>
+      <table id="employeesTable">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Job Title</th>
+            <th>Years at Company</th>
+            <th>Email</th>
+            <th>wfhAddress</th>
+            <th>Skillset</th>
+            <th>Projects</th>
+          </tr>
+        </thead>
+        <tbody id="employeesTableBody"></tbody>
+      </table>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

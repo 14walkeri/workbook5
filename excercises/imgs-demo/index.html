@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Images</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <div>
+        <img src="https://placehold.co/400" />
+        <p>hey</p>
+      </div>
+      <div>
+        <img src="https://placehold.co/400" />
+        <p>hi</p>
+      </div>
+      <div>
+        <img src="https://placehold.co/400" />
+        <p>hello</p>
+        <button type="button">decorate</button>
+      </div>
+    </main>
+    <script>
+      const paragraphs = document.querySelectorAll("p");
+      for (const para of paragraphs) {
+        para.style.border = "1px solid black";
+      }
+      const image = document.querySelectorAll("img");
+      for (const images of image) {
+        images.className = "roundedImage";
+      }
+
+      const decorateButton = document.querySelector("button")
+      for (const iterator of object) {
+        
+      }
+    </script>
+  </body>
+</html>
