@@ -247,6 +247,8 @@ let employees = [
     ],
   },
 ];
+const employeesTable = document.querySelector("#employeesTable");
+
 const employeesList = document.querySelector("#employeesList");
 const employeesTableBody = document.querySelector("#employeesTableBody");
 function loadDropDownEmployees() {
@@ -255,19 +257,22 @@ function loadDropDownEmployees() {
     option.value = employee.id;
     option.innerText = employee.name;
     employeesList.appendChild(option);
-    //     if (employee.id == id) {
-    //       let row = employeesTableBody.insertRow(-1);
-
-    //       let cell1 = row.insertCell(0);
-    //       cell1.innerText = employee.name;
-    //     } else {
-    //     }
   }
 }
 function loadEmployeesTable() {
+  employeesTableBody.innerHTML = "";
+
+  const id = employeesList.value;
+
+  if (id) {
+    employeesTable.style.display = "block";
+  } else {
+    employeesTable.style.display = "none";
+  }
+
   for (const employee of employees) {
     const number = employee.projectsAssignedTo;
-    const id = employeesList.value;
+
     if (employee.id == id) {
       let row = employeesTableBody.insertRow(-1);
       let cell1 = row.insertCell(0);
@@ -290,4 +295,5 @@ function loadEmployeesTable() {
   }
 }
 
+employeesList.onchange = loadEmployeesTable;
 loadDropDownEmployees();
